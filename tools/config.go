@@ -5,11 +5,22 @@ import (
 	"encoding/json"
 )
 
+//基础配置
 type Config struct{
 	AppName string  `json:"app_name"`
 	AppMode string  `json:"app_mode"`
 	AppHost string  `json:"app_host"`
 	AppPort string  `json:"app_port"`
+	*DataBase  `json:"database"`
+}
+//数据库配置
+type DataBase struct{
+   MsqlHost     string     `json:"mysql_host"`
+   MsqlPort     string     `json:"mysql_port"`
+   MsqlUser     string     `json:"mysql_user"`
+   MsqlPassword string     `json:"mysql_password"`
+   MsqlDb       string     `json:"mysql_db"`
+   MsqlCharSet  string     `json:"mysql_charset"`
 }
 
 var _cfg *Config = nil

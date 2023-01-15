@@ -1,10 +1,12 @@
 package routes
 import (
-	 "myoneapi/controller"
 	 "github.com/gin-gonic/gin"
+
+	 "myoneapi/controller"
 )
 type initRouter struct{
 	controller.HelloController
+	controller.RegisterUser
 }
 //路由列表
 func (initrouter *initRouter) Router(engine *gin.Engine){
@@ -18,6 +20,7 @@ func (initrouter *initRouter) Router(engine *gin.Engine){
 	home.GET("/", initrouter.Hello)
 	//v1版本路由组
 	v1.GET("/hello", initrouter.Hello)
+	v1.POST("/register", initrouter.Registers)
 }
 
 //路由设置

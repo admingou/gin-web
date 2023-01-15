@@ -8,11 +8,7 @@ type HelloController struct{
 
 }
 
-// func (hello *HelloController) Router(engine *gin.Engine){
-// 	engine.GET("/hello", hello.Hello)
-// }
-
-//解析 /hello路由
+//访问首页逻辑
 func (hello *HelloController) Hello(cntext *gin.Context){
      cntext.IndentedJSON(http.StatusOK, map[string]interface{}{
 		"code": http.StatusOK,
