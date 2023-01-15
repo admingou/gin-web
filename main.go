@@ -12,6 +12,7 @@ func main(){
 	if error != nil{
 		panic(error.Error())
 	}
+	//gin框架初始化
 	app := gin.Default()
     //路由注册
 	routes.RegisterRouter(app)

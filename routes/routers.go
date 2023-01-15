@@ -3,11 +3,11 @@ import (
 	 "myoneapi/controller"
 	 "github.com/gin-gonic/gin"
 )
-type InitRouter struct{
+type initRouter struct{
 	controller.HelloController
 }
 //路由列表
-func (initrouter *InitRouter) Router(engine *gin.Engine){
+func (initrouter *initRouter) Router(engine *gin.Engine){
 	//页面组路由
 	home := engine.Group("/home")
 	//api组路由
@@ -22,5 +22,5 @@ func (initrouter *InitRouter) Router(engine *gin.Engine){
 
 //路由设置
 func RegisterRouter(app *gin.Engine){ 
-	new(InitRouter).Router(app)
+	new(initRouter).Router(app)
  }
