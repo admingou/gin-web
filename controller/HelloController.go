@@ -8,9 +8,9 @@ type HelloController struct{
 
 }
 
-func (hello *HelloController) Router(engine *gin.Engine){
-	engine.GET("/hello", hello.Hello)
-}
+// func (hello *HelloController) Router(engine *gin.Engine){
+// 	engine.GET("/hello", hello.Hello)
+// }
 
 //解析 /hello路由
 func (hello *HelloController) Hello(cntext *gin.Context){
