@@ -1,0 +1,6 @@
+{
+    "app_name": "gouapi",
+    "app_mode": "debug",
+    "app_host": "192.28.1.241",
+    "app_port": "8081"
+}
